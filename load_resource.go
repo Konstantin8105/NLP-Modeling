@@ -1,4 +1,4 @@
-package main
+package nlp
 
 import (
 	"encoding/xml"
@@ -22,7 +22,35 @@ type Resource struct {
 	Strings      []String      `xml:"string"`
 }
 
-func main() {
+func LoadResource(lang Language) (lines map[string]string, err error) {
+	defer func() {
+		if err != nil {
+			err = fmt.Errorf("Error in LoadResource. err = %v", err)
+		}
+	}()
+	var langList []Language
+	langList, err = GetLanguageList()
+	if err != nil {
+		return
+	}
+
+	langList = append(langList, lang)
+
+	// Load all resources for all language
+	// Load `lang` language at the last
+	for _, lang := range langList {
+		var l map[string]string
+		l, err = load(ResourceLocation + "/" + xmlLocation + "-" + string(lang))
+		if err != nil {
+			return
+		}
+		lines = append(lines, l)
+	}
+
+	return
+}
+
+func load(path string) (lines map[string]string, err error) {
 	dat, err := ioutil.ReadFile("./strings_model.xml")
 	if err != nil {
 		fmt.Println(err)
