@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+
+    <string name="navigation_drawer_other">Other</string>
+
+    <string name="icon" translatable="false">Icon</string>
+
+    <string name="action_sort">Sort</string>
+    <string name="action_open_models">Open models</string>
+    <string name="action_save_models">Save models</string>
+
+    <string name="detail_mode_read_only">Read only</string>
+    <string name="detail_mode_write_mde">Write</string>
+
+    <string name="title_activity_detail" translatable="false">DetailActivity</string>
+    <string name="title_activity_about" translatable="false">AboutActivity</string>
+    <string name="title_activity_open" translatable="false">OpenActivity</string>
+    <string name="title_activity_save" translatable="false">SaveActivity</string>
+
+    <plurals name="remove_models">
+        <item quantity="one">Remove %d model</item>
+        <item quantity="other">Remove %d models</item>
+    </plurals>
+
+    <plurals name="archived_models">
+        <item quantity="one">Move to archive %d model</item>
+        <item quantity="other">Move to archive %d models</item>
+    </plurals>
+
+    <plurals name="normaled_models">
+        <item quantity="one">Move to folder %d model</item>
+        <item quantity="other">Move to folder %d models</item>
+    </plurals>
+
+    <plurals name="share_models">
+        <item quantity="one">Share %d model</item>
+        <item quantity="other">Share %d models</item>
+    </plurals>
+
+    <string name="share">Share</string>
+    <string name="to_archive">To archive</string>
+    <string name="delete_models">Delete models</string>
+
+    <string name="task_start_saving">Start saving&#8230;</string>
+    <string name="task_file_created">File created</string>
+
+    <string name="task_start_opening">Start opening&#8230;</string>
+    <string name="task_filename">File:</string>
+
+
+    <plurals name="task_amount_models">
+        <item quantity="one">Found %d model in file</item>
+        <item quantity="other">Found %d models in file</item>
+    </plurals>
+
+    <string name="task_analyzing">Analyzing&#8230;</string>
+    <string name="task_finish_analyze">Finish analyze</string>
+    <string name="task_find_same_in_file">Find same models in File</string>
+    <string name="task_find_same_in_db">Find same models in File with database</string>
+
+    <plurals name="task_unique_models">
+        <item quantity="one">Unique %2d model</item>
+        <item quantity="other">Unique %2d models</item>
+    </plurals>
+
+    <plurals name="task_amount_models_add">
+        <item quantity="one">%2d model will add to database</item>
+        <item quantity="other">%2d models will add to database</item>
+    </plurals>
+
+    <string name="task_added_in_db">Models added in database</string>
+
+    <string name="nav_folder">Folder</string>
+    <string name="nav_archive">Archive</string>
+    <string name="nav_help">Help</string>
+
+    <string name="menu_unarchive">Unarchive</string>
+
+    <string name="menu_popup_alphabet">by alphabet</string>
+    <string name="menu_popup_alphabet_invert">by alphabet(inversion)</string>
+    <string name="menu_popup_name_model">by name of model</string>
+    <string name="menu_popup_name_model_invert">by name of model(inversion)</string>
+    <string name="menu_popup_name_date">by date</string>
+    <string name="menu_popup_name_date_invert">by date(inversion)</string>
+
+    <string name="google_plus">Google+</string>
+
+    <string name="dialog_remove">Are you sure remove?</string>
+    <string name="answer_yes">Yes</string>
+    <string name="answer_no">No</string>
+
+    <string name="about_developer">About developer</string>
+</resources>
