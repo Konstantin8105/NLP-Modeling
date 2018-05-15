@@ -22,7 +22,7 @@ type Resource struct {
 	Strings      []String      `xml:"string"`
 }
 
-func LoadResource(lang Language) (lines map[string]string, err error) {
+func LoadResource(lang Language) (lines map[Language]string, err error) {
 	defer func() {
 		if err != nil {
 			err = fmt.Errorf("Error in LoadResource. err = %v", err)
@@ -39,19 +39,20 @@ func LoadResource(lang Language) (lines map[string]string, err error) {
 	// Load all resources for all language
 	// Load `lang` language at the last
 	for _, lang := range langList {
-		var l map[string]string
+		var l map[Language]string
 		l, err = load(ResourceLocation + "/" + xmlLocation + "-" + string(lang))
 		if err != nil {
 			return
 		}
-		lines = append(lines, l)
+		_ = l
+		// lines[lang] = l
 	}
 
 	return
 }
 
-func load(path string) (lines map[string]string, err error) {
-	dat, err := ioutil.ReadFile("./strings_model.xml")
+func load(path string) (lines map[Language]string, err error) {
+	dat, err := ioutil.ReadFile(path + "/" + "strings_model.xml")
 	if err != nil {
 		fmt.Println(err)
 		return
@@ -72,4 +73,6 @@ func load(path string) (lines map[string]string, err error) {
 	for _, l := range res.Strings {
 		fmt.Printf("%#v\n", l)
 	}
+
+	return
 }
